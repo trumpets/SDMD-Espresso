@@ -5,9 +5,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
-import androidx.test.rule.ActivityTestRule;
 
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
@@ -27,7 +27,7 @@ import static org.hamcrest.core.IsInstanceOf.instanceOf;
 public class AdapterActivityTest {
 
     @Rule
-    public ActivityTestRule<AdapterActivity> activityTestRule = new ActivityTestRule<>(AdapterActivity.class);
+    public ActivityScenarioRule<AdapterActivity> activityTestRule = new ActivityScenarioRule<>(AdapterActivity.class);
 
     @Test
     public void clickProperName() {
